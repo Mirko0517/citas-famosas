@@ -1,0 +1,19 @@
+<form (ngSubmit)="agregarCitas()">
+  <div class="form-item">
+    <label for="frase">Frase </label>
+    <input type="text" [(ngModel)]="frase" id="frase" name="frase" />
+    <div *ngIf="errorFrase" class="error-message">
+      La frase es requerida y debe tener al menos 5 caracteres.
+    </div>
+  </div>
+
+  <div class="form-item">
+    <label for="autor">Autor </label>
+    <input type="text" [(ngModel)]="autor" id="autor" name="autor" />
+    <div *ngIf="errorAutor" class="error-message">
+      El autor es requerido y debe tener al menos 2 caracteres.
+    </div>
+  </div>
+  <br />
+  <button type="submit">Agregar +</button>
+</form>

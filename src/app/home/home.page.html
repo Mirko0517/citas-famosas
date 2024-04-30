@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Citas </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="irConfiguracion()">
+        <ion-icon name="settings-outline" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="cita">
+    <ion-card-content>
+      <p class="frase">{{ cita.frase }}</p>
+      <p class="autor">{{ cita.autor }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-buttons>
+  <ion-button routerLink="/gestion-citas">
+    <ion-icon name="add-circle-outline" slot="end"></ion-icon>
+  </ion-button>
+</ion-buttons>
